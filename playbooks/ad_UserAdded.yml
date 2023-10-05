@@ -10,19 +10,18 @@
    SN_Host:
 
   tasks:
-
-    - name: Create ServiceNow incident
-      servicenow.itsm.incident:
-        instance:
-          host: "{{ SN_Host }}"
-          username: "{{ SN_Username }}"
-          password: "{{ SN_Password }}"
-        short_description: "New user account created in Active Directory"
-        description: |-
-          Details: {{ ansible_eda.body.message | default("") }}
-          Event-ID: {{ ansible_eda.event.code | default("") }}
-          Event-Type: {{ ansible_eda.body.action | default("") }}
-        impact: 2  # Change this as needed
-        urgency: 2  # Change this as needed
+   - name: Create incident
+     servicenow.itsm.incident:
+      instance:
+       host: "{{ SN_HOST }}"
+       username: "{{ SN_USERNAME }}"
+       password: "{{ SN_PASSWORD }}"
+      state: new
+      short_description: "New user account created in Active Directory"
+      description: |-
+       Details: {{ ansible_eda.body.message | default("") }}
+       Event-ID: {{ ansible_eda.event.code | default("") }}
+       Event-Type: {{ ansible_eda.body.action | default("") }}
+      impact: 2  # Change this as needed
+      urgency: 2  # Change this as needed
       register: incident_result
-
