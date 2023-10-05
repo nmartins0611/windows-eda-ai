@@ -21,7 +21,7 @@
       description: |-
        Details: {{ ansible_eda.event.body.message | default("") }}
        Event-ID: {{ ansible_eda.event.body.winlog.event-id | default("") }}
-       Event-Status: {{ ansible_eda.body.event.outcome | default("") }}
+       Event-Status: {{ ansible_eda.event.body.event.outcome | default("") }}
       impact: 2  # Change this as needed
       urgency: 2  # Change this as needed
     #register: incident_result
