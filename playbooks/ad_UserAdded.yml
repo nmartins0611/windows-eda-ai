@@ -5,9 +5,9 @@
     - servicenow.itsm
 
   vars:
-   SN_Username:
-   SN_Password:
-   SN_Host:
+   SN_USERNAME:
+   SN_PASSWORD:
+   SN_HOST:
 
   tasks:
    - name: Create incident
