@@ -16,5 +16,11 @@
         organization: "Default"
         name: "Windows AD Events"
 
+   - name: Security Event
+     condition: event.payload.body.message is search("The Windows Firewall service")
+     action:
+       run_job_template:
+        organization: "Default"
+        name: "Windows Enhanced Ticket"
 
 
