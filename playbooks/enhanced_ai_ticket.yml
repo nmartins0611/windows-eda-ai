@@ -44,5 +44,5 @@
        description: |-
         Details: {{ ansible_eda.event.body.message | default("") }}
         AI Enhanced Details: {{ response_text | default("") }}
-       impact: 2  # Change this as needed
-       urgency: 2  # Change this as needed
+     #  impact: 2  # Change this as needed
+     #  urgency: 2  # Change this as needed
