@@ -17,11 +17,11 @@
        username: "{{ SN_USERNAME }}"
        password: "{{ SN_PASSWORD }}"
       state: new
-      short_description: "New user account created in Active Directory"
+      short_description: {{ ansible_eda.event.body.event.action }}
       description: |-
-       Details: {{ ansible_eda.body.message | default("") }}
-       Event-ID: {{ ansible_eda.event.code | default("") }}
-       Event-Type: {{ ansible_eda.body.action | default("") }}
+       Details: {{ ansible_eda.event.body.message | default("") }}
+       Event-ID: {{ ansible_eda.event.body.winlog.event-id | default("") }}
+       Event-Status: {{ ansible_eda.body.event.outcome | default("") }}
       impact: 2  # Change this as needed
       urgency: 2  # Change this as needed
     #register: incident_result
