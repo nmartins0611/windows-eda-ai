@@ -1,0 +1,19 @@
+---
+- name: Port State Event from Arista
+
+  hosts: all
+  sources:
+   - ansible.eda.kafka:
+       host: 192.168.89.155
+       port: 9092
+       topic: logs
+
+  rules:
+   - name: AD Account Change
+     condition: event.body.winlog.event_id == "4722"
+     action:
+       run_playbook:
+         name: ad_add.yml
+
+
+
