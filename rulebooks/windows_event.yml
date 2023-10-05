@@ -12,8 +12,9 @@
    - name: AD Account Change
      condition: event.body.winlog.event_id == "4722"
      action:
-       run_playbook:
-         name: ad_add.yml
+       run_job_template:
+        organization: "Default"
+        name: "Windows AD Events"
 
 
 
