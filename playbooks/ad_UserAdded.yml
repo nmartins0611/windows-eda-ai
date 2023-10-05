@@ -24,4 +24,4 @@
        Event-Type: {{ ansible_eda.body.action | default("") }}
       impact: 2  # Change this as needed
       urgency: 2  # Change this as needed
-      register: incident_result
+    #register: incident_result
