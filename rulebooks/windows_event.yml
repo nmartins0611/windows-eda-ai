@@ -1,5 +1,5 @@
 ---
-- name: Port State Event from Arista
+- name: Events from Windows AD
 
   hosts: all
   sources:
