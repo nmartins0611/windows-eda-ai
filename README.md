@@ -1,5 +1,10 @@
 # windows-eda-ai
 
+Used winlogfile to send logs to kafka
+
+
+
+
 Payload from Kafka: 
 
 Example of Event - json:
