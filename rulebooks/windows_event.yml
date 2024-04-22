@@ -4,7 +4,7 @@
   hosts: all
   sources:
    - ansible.eda.kafka:
-       host: 192.168.89.155
+       host: 192.168.124.240
        port: 9092
        topic: logs
 
