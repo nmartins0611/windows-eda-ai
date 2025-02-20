@@ -4,7 +4,7 @@
   hosts: all
   sources:
    - ansible.eda.kafka:
-       host: 172.31.92.232
+       host: 172.31.90.232
        port: 9092
        topic: windows
 
